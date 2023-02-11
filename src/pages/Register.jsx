@@ -17,6 +17,7 @@ import {
   Checkbox
 } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
@@ -74,6 +75,14 @@ const Register = () => {
         value: "gaming"
     }
   ]
+
+  let navigate = useNavigate(); 
+
+  const routeChange = () =>{ 
+    let path = `/events`; 
+    console.log("Hello amith")
+    navigate(path);
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -301,9 +310,7 @@ const Register = () => {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                onClick={()=>{
-                  window.location = "/events" 
-                }}
+                onClick={routeChange}
               >
                 Submit
               </Button>
