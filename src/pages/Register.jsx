@@ -80,7 +80,6 @@ const Register = () => {
 
   const routeChange = () =>{ 
     let path = `/events`; 
-    console.log("Hello amith")
     navigate(path);
   }
 
